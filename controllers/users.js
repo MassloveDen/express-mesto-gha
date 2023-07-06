@@ -7,7 +7,6 @@ const {
   handleError,
 } = require('../constants');
 
-
 module.exports.createUser = (req, res) => {
   const { name, about, avatar } = req.body;
   User.create({ name, about, avatar })

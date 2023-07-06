@@ -4,8 +4,6 @@ const {
   handleError,
 } = require('../constants');
 
-
-
 module.exports.getCards = (req, res) => {
   Card.find({})
     .then((card) => {
