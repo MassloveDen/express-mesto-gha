@@ -7,11 +7,9 @@ const checkCard = (card, res) => {
   if (card) {
     return res.send({ data: card });
   }
-  return res
-    .status(ERROR_NOT_FOUND)
-    .send({
-      message: `Карточка с указанным _id не найдена ${ERROR_NOT_FOUND}`,
-    });
+  return res.status(ERROR_NOT_FOUND).send({
+    message: `Карточка с указанным _id не найдена ${ERROR_NOT_FOUND}`,
+  });
 };
 
 module.exports.getCards = (req, res) => {

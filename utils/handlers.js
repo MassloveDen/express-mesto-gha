@@ -24,9 +24,7 @@ module.exports = (err, req, res, next) => {
   }
 
   if (
-    err instanceof NotFound ||
-    err instanceof Unauthorized ||
-    err instanceof Forbidden
+    err instanceof NotFound || err instanceof Unauthorized || err instanceof Forbidden
   ) {
     const { message } = err;
     return res.status(err.type).send({ message });

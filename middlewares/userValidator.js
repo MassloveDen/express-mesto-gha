@@ -1,5 +1,5 @@
-const { Joi, celebrate } = require('celebrate');
-const { REGEX } = require('../utils/constants');
+const { Joi, celebrate } = require("celebrate");
+const { REGEX } = require("../utils/constants");
 
 module.exports.validateSignin = celebrate({
   body: Joi.object().keys({
@@ -18,7 +18,9 @@ module.exports.validateSignup = celebrate({
   }),
 });
 module.exports.validateUserId = celebrate({
-  params: Joi.object().keys({ userId: Joi.string().length(24).required().hex() }),
+  params: Joi.object().keys({
+    userId: Joi.string().length(24).required().hex(),
+  }),
 });
 
 module.exports.validateUpdateProfile = celebrate({
