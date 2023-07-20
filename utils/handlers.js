@@ -37,7 +37,7 @@ module.exports = (err, req, res, next) => {
   }
 
   res.status(ERROR_INTERNAL_SERVER).send({
-    message: `Произошла неизвестная ошибка ${err.name}: ${err.message}`,
+    message: "На сервере произошла ошибка",
   });
 
   return next();
