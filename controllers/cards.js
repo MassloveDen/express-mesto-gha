@@ -35,7 +35,7 @@ module.exports.createCards = (req, res, next) => {
     .catch(next);
 };
 
-module.exports.deleteCards = (req, res, next) => {
+module.exports.deleteCard = (req, res, next) => {
   const _id = req.params.cardId;
 
   Card.findOne({ _id })
