@@ -5,10 +5,10 @@ const {
   ERROR_NOT_FOUND,
   ERROR_CONFLICT,
   ERROR_INTERNAL_SERVER,
-} = require("./constants");
-const Unauthorized = require("../Error/Unauthorized");
-const NotFound = require("../Error/NotFound");
-const Forbidden = require("../Error/Forbidden");
+} = require('./constants');
+const Unauthorized = require('../Error/Unauthorized');
+const NotFound = require('../Error/NotFound');
+const Forbidden = require('../Error/Forbidden');
 
 module.exports = (err, req, res, next) => {
   if (err instanceof CastError || err instanceof ValidationError) {
@@ -33,11 +33,11 @@ module.exports = (err, req, res, next) => {
   if (err.code === 11000) {
     return res
       .status(ERROR_CONFLICT)
-      .send({ message: "Адрес электронной почты уже зарегистрирован" });
+      .send({ message: 'Адрес электронной почты уже зарегистрирован' });
   }
 
   res.status(ERROR_INTERNAL_SERVER).send({
-    message: "На сервере произошла ошибка",
+    message: 'На сервере произошла ошибка',
   });
 
   return next();
