@@ -18,11 +18,8 @@ app.use(errorCelebrate());
 app.use(errHandlers);
 
 app.use((err, req, res, next) => {
-  const { statusCode = ERROR_INTERNAL_SERVER, message } = err;
-
-  res.status(statusCode).send({
-    message:
-      statusCode === ERROR_INTERNAL_SERVER ? 'Ошибка на сервере' : message,
+  res.status(ERROR_INTERNAL_SERVER).send({
+    message: 'На сервере произошла ошибка',
   });
 
   next();
