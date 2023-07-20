@@ -8,7 +8,7 @@ const checkCard = (card, res) => {
     return res.send({ data: card });
   }
   return res.status(ERROR_NOT_FOUND).send({
-    message: `Карточка с указанным _id не найдена ${ERROR_NOT_FOUND}`,
+    message: `Карточка с указанным _id не найдена`,
   });
 };
 
@@ -42,7 +42,7 @@ module.exports.deleteCard = (req, res) => {
         return res.send({ message: 'Карточка была удалена' });
       }
       return res.status(ERROR_NOT_FOUND).send({
-        message: `Карточка с указанным _id не найдена ${ERROR_NOT_FOUND}`,
+        message: `Карточка с указанным _id не найдена`,
       });
     })
     .catch((err) => handleError(err, res));
