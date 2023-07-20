@@ -1,5 +1,4 @@
-const { ValidationError, CastError, DocumentNotFoundError } =
-  require("mongoose").Error;
+const { ValidationError, CastError, DocumentNotFoundError } = require('mongoose').Error;
 const {
   ERROR_CODE,
   ERROR_NOT_FOUND,

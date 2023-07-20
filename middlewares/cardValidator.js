@@ -1,5 +1,5 @@
-const { Joi, celebrate } = require("celebrate");
-const { REGEX } = require("../utils/constants");
+const { Joi, celebrate } = require('celebrate');
+const { REGEX } = require('../utils/constants');
 
 module.exports.validateCard = celebrate({
   body: Joi.object().keys({
